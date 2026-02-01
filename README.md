@@ -1,73 +1,105 @@
-# Welcome to your Lovable project
+🚀 AI Mock Interview Platform
 
-## Project info
+An AI-powered, rule-based mock interview platform designed to simulate real-world technical interviews with adaptive difficulty, time constraints, and objective evaluation.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This project was built as a **Hack2Hire: AI-Powered Interview Hackathon** submission and focuses on **state-based simulation**, **adaptive decision-making**, and **deterministic scoring logic**.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Key Features
 
-**Use Lovable**
+- 📄 **Resume & Job Description Analysis**
+  - Extracts skills, experience, and role relevance
+  - Aligns interview questions with job requirements
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- 🧠 **Adaptive Interview Engine**
+  - Difficulty levels: Easy → Medium → Hard
+  - Dynamically adjusts based on candidate performance
 
-Changes made via Lovable will be committed automatically to this repo.
+- ⏱️ **Strict Time Management**
+  - Fixed response time per question
+  - Penalties for delayed or incomplete answers
 
-**Use your preferred IDE**
+- ⚠️ **Early Interview Termination**
+  - Ends interview if performance drops below defined thresholds
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- 📊 **Objective Scoring System**
+  - Accuracy
+  - Clarity
+  - Depth
+  - Relevance
+  - Time efficiency
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- 🧾 **Final Interview Readiness Report**
+  - Readiness score (0–100)
+  - Skill-wise performance breakdown
+  - Strengths & weaknesses
+  - Actionable improvement feedback
+  - Hiring readiness indicator for the given role
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🧩 System Design Overview
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+The platform is implemented using a **state-machine-based architecture**:
 
-# Step 3: Install the necessary dependencies.
-npm i
+**States:**
+- INIT
+- RESUME_ANALYSIS
+- QUESTIONING
+- SCORING
+- EARLY_TERMINATION
+- FINAL_EVALUATION
+- END
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Each state has clearly defined entry conditions, transitions, and validation rules to ensure deterministic and reproducible behavior.
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚡ Vite
+- ⚛️ React
+- 🟦 TypeScript
+- 🎨 Tailwind CSS
+- 🧩 shadcn/ui
+
+---
+
+## 📂 Project Structure
+
+src/
+├── components/ # Reusable UI components
+├── engine/ # Interview logic, scoring, state handling
+├── hooks/ # Custom React hooks
+├── pages/ # App pages (Home, Interview, Results)
+├── lib/ # Utility functions
+└── main.tsx # App entry point
+
+
+---
+
+## ▶️ Running the Project Locally
+
+### Prerequisites
+- Node.js (v18 or above)
+- npm
+
+### Steps
+
+```bash
+# Clone the repository
+git clone <YOUR_GITHUB_REPO_URL>
+
+# Navigate to the project directory
+cd hack2hire-ai-mock-interview
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-```
+The application will be available at:
 
-**Edit a file directly in GitHub**
+http://localhost:8080
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
